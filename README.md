@@ -103,7 +103,7 @@ This project was built with a focus on:
 * **Insight-driven experience** — Helping users understand financial data
 * **Frontend-first thinking** — Simulating real-world scenarios without backend
 
-The goal was to build a **practical, user-friendly financial dashboard** rather than an overly complex system.
+The goal was to build a **practical, user-friendly financial dashboard**.
 
 ---
 
@@ -186,12 +186,23 @@ A dynamic alerting system that enhances financial awareness.
 
 ---
 
+### 📈 Insights Section
+
+* Top spending category
+* Monthly expense change
+* Average income
+* Income vs expense comparison
+* Category-wise trends
+
+---
+
 ## 🧰 Tech Stack
 
 * **Frontend:** React.js
 * **State Management:** Context API
 * **Charts:** Recharts
 * **Styling:** Custom CSS
+* **Data:** Mock data
 * **Deployment:** Vercel
 
 ---
@@ -249,6 +260,71 @@ Designed to work across different screen sizes with a focus on readability.
 
 ---
 
+## ⚙️ Getting Started Locally
+
+<details>
+<summary>Click to expand setup instructions</summary>
+
+### 📌 Prerequisites
+
+* Node.js (v14 or higher recommended)
+* npm or yarn
+
+---
+
+### 📥 Installation
+
+```bash
+git clone https://github.com/your-username/finflo.git
+cd finflo
+npm install
+```
+
+---
+
+### ▶️ Run the App
+
+```bash
+npm start
+```
+
+App runs at: http://localhost:3000
+
+---
+
+### 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+</details>
+
+---
+
+## 🌐 Browser Support
+
+Tested on:
+
+* Google Chrome
+* Microsoft Edge
+* Mozilla Firefox
+
+---
+
+## 🤝 Contributing
+
+This project is built for learning and evaluation purposes.
+Contributions are welcome for improvements and feature enhancements.
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
+
+---
+
 ## 🌱 Future Improvements
 
 * Backend integration
@@ -260,7 +336,7 @@ Designed to work across different screen sizes with a focus on readability.
 
 ## 📌 Final Note
 
-This project demonstrates a **frontend-driven approach** to building a real-world financial dashboard with a focus on usability, insights, and proactive alerts.
+This project demonstrates a frontend-driven approach to building a real-world financial dashboard focused on usability, insights, and proactive alerts.
 
 ---
 

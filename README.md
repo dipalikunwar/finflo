@@ -1,174 +1,272 @@
-# Finflo — Finance Dashboard
+# 💸 Finflo — Smart Finance Dashboard
 
-A clean, interactive finance dashboard built with React for the Zorvyn Frontend Developer Intern assignment.
+A frontend-focused financial dashboard with role-based UI, real-time insights, and a smart alerting system to prevent overspending.
 
 ---
 
-## Quick Start
+## 🚀 Live Demo
 
-### Prerequisites
-- Node.js v16 or above
-- npm v7 or above
+🔗 https://finflo-snbh.vercel.app/
 
-### Steps
+---
 
-**1. Clone / download the project**
+## 📸 Screenshots
+
+### 🏠 Dashboard Overview (Light Mode)
+
+![Dashboard Light](./image.png)
+
+### 🌙 Dashboard Overview (Dark Mode)
+
+![Dashboard Dark](./image-1.png)
+
+### 👤 Role-Based Access (Admin vs Viewer)
+
+![Role Based](./image-2.png)
+
+---
+
+### 🚨 Smart Alerts System (Unique Feature)
+
+![Alerts Banner](./image-3.png)
+
+> Automatically notifies users when spending exceeds or approaches budget limits and redirects to the Alerts page.
+
+---
+
+### 📊 Financial Summary & Budget Snapshot
+
+![Summary](./image-4.png)
+
+### 📈 Data Visualization (Charts for Insights)
+
+![Charts](./image-5.png)
+
+### 💳 Transactions Management
+
+![Transactions](./image-6.png)
+
+> Includes search, filtering, sorting, CSV export, and add transaction functionality (Admin only)
+
+---
+
+### 💰 Budget Management
+
+![Budgets](./image-7.png)
+
+---
+
+### ⭐ Core Highlight — Alerts Classification
+
+![Alerts Detail](./image-8.png)
+
+---
+
+### 📈 Insights Section
+
+![Insights](./image-9.png)
+
+---
+
+## 👀 Viewer Mode Screens
+
+### 👤 Viewer Dashboard Access
+
+![Viewer 1](./image-10.png)
+
+### 📊 Viewer Transactions Access
+
+![Viewer 2](./image-11.png)
+
+### 💰 Viewer Budget Access
+
+![Viewer 3](./image-12.png)
+
+### 🚨 Viewer Alerts Access
+
+![Viewer 4](./image-13.png)
+
+### 📈 Viewer Insights Access
+
+![Viewer 5](./image-14.png)
+
+> In Viewer mode, users can only view data and export CSV. They cannot modify or add transactions.
+
+---
+
+## 🧠 My Approach
+
+This project was built with a focus on:
+
+* **Clarity over complexity** — Simple and intuitive UI
+* **Modular design** — Breaking UI into reusable sections
+* **Insight-driven experience** — Helping users understand financial data
+* **Frontend-first thinking** — Simulating real-world scenarios without backend
+
+The goal was to build a **practical, user-friendly financial dashboard** rather than an overly complex system.
+
+---
+
+## 🎯 Problem Statement
+
+Users often struggle to:
+
+* Track spending patterns
+* Identify overspending
+* Stay within budget
+
+Finflo addresses this using **visual insights + structured data + smart alerts**.
+
+---
+
+## ✨ Key Features
+
+### 📊 Dashboard Overview
+
+* Total Balance, Income, Expenses
+* Budget usage indicator
+* Monthly trends (line chart)
+* Spending breakdown (donut chart)
+* Budget snapshot
+
+---
+
+### 💳 Transactions Management
+
+* Transaction details (date, category, type, amount)
+* 🔍 Search functionality
+* 🎯 Filtering (type & category)
+* ↕️ Sorting
+* ➕ Add transactions (Admin)
+* 📤 Export CSV
+
+---
+
+### 👤 Role-Based UI
+
+* Roles: **Admin / Viewer**
+* Admin: Full access (add/edit)
+* Viewer: Read-only access
+* Simulated using frontend logic
+
+---
+
+### 💰 Budget Management
+
+* Category-wise budgets
+* Visual progress tracking
+* Status indicators:
+
+  * ❌ Exceeded
+  * ⚠️ Near limit
+  * ✅ On track
+
+---
+
+## 🚨 ⭐ Unique Feature: Smart Alerts System
+
+A dynamic alerting system that enhances financial awareness.
+
+### 🔍 How it works:
+
+* Monitors spending per category
+* Classifies into:
+
+| Status        | Condition         |
+| ------------- | ----------------- |
+| ❌ Exceeded    | Spending > Budget |
+| ⚠️ Near Limit | ≥ ~80% of budget  |
+| ✅ On Track    | Within safe range |
+
+### 💡 Why this matters:
+
+* Prevents overspending early
+* Provides actionable insights
+* Simulates real-world finance apps
+
+---
+
+## 🧰 Tech Stack
+
+* **Frontend:** React.js
+* **State Management:** Context API
+* **Charts:** Recharts
+* **Styling:** Custom CSS
+* **Deployment:** Vercel
+
+---
+
+## 🧠 State Management
+
+Handled using Context API for:
+
+* Transactions
+* Budgets
+* Role selection
+* Filters
+
+Ensures centralized and consistent data flow.
+
+---
+
+## 📂 Project Structure
+
 ```bash
-git clone <your-repo-url>
-cd finflo
-```
-
-**2. Install dependencies**
-```bash
-npm install
-```
-
-**3. Start the development server**
-```bash
-npm start
-```
-
-The app opens at `http://localhost:3000` automatically.
-
-**4. Build for production**
-```bash
-npm run build
-```
-
----
-
-## Project Structure
-
-```
-finflo/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   ├── Overview.js        # Dashboard overview tab
-│   │   ├── Transactions.js    # Transactions list with filters
-│   │   ├── Budgets.js         # Budget limits management
-│   │   ├── Alerts.js          # Budget alerts and warnings
-│   │   └── Insights.js        # Data insights and charts
-│   ├── context/
-│   │   └── AppContext.js      # Global state via React Context
-│   ├── data/
-│   │   └── mockData.js        # Static mock transactions and budgets
-│   ├── App.js                 # Root component, layout, routing
-│   ├── App.css                # All styles (responsive, dark mode)
-│   └── index.js               # React entry point
-└── package.json
+src/
+├── components/
+│   ├── Alerts.js
+│   ├── Budgets.js
+│   ├── Insights.js
+│   ├── Overview.js
+│   ├── Transactions.js
+│
+├── context/
+│   ├── AppContext.js
+│
+├── data/
+│   ├── mockData.js
+│
+├── App.js
+├── App.css
+├── index.js
 ```
 
 ---
 
-## Features
+## 🎨 UI/UX Principles
 
-### 1. Dashboard Overview
-- Four summary metric cards: Total Balance, Income, Expenses, Budget Used
-- Budget snapshot strip showing top 4 category limits with progress bars
-- Line chart showing 6-month balance trend (net, income, expenses)
-- Doughnut chart showing spending breakdown by category for current month
-
-### 2. Transactions
-- Full list of 35 mock transactions with date, description, category, type, amount
-- Search by description or category
-- Filter by type (income / expense) and category
-- Sort by date (newest/oldest) or amount (highest/lowest)
-- Export all transactions to CSV
-- Admin can add new transactions and remove existing ones
-
-### 3. Budgets and Limits
-- Set spending limits per category for monthly, weekly, or yearly periods
-- Progress bars with color coding: green (safe), amber (80%+), red (exceeded)
-- Total budget overview bar showing overall spend vs total limit
-- Admin can add or edit limits; Viewer can only see them
-
-### 4. Alerts
-- Dedicated tab with count badge in navbar showing active alerts
-- Three summary cards: Exceeded / Near limit / On track
-- Full alert list with category, amount spent vs limit, and percentage bar
-- Alert banner on Overview tab when any category hits 80%+ usage
-
-### 5. Insights
-- Six insight cards: top spending category, month-over-month expense change, average income, total savings, current month net, and active alert count
-- Grouped bar chart comparing income vs expenses across 6 months
-- Horizontal bar chart showing all-time top spending categories
-
-### 6. Role-Based UI
-- Admin: can add/edit transactions, set/edit budget limits, remove transactions
-- Viewer: read-only access to all data, all management controls are hidden
-- Switch roles via the dropdown in the topbar
-
-### 7. Additional Features
-- Dark mode toggle in topbar
-- Data persistence using localStorage (transactions and budgets survive page refresh)
-- Fully responsive layout (works on mobile, tablet, and desktop)
-- Empty state handling when no data matches filters or no budgets are set
+* Clean and minimal design
+* Consistent color coding
+* Visual hierarchy using cards & charts
+* Instant feedback via alerts
+* Easy navigation
 
 ---
 
-## State Management
+## 📱 Responsiveness
 
-Global state is managed using React Context (`AppContext.js`). The context provides:
-
-- `transactions` — array of all transaction objects
-- `budgets` — array of budget limit objects (cat, limit, period)
-- `role` — current role: "admin" or "viewer"
-- `darkMode` — boolean for theme toggle
-- `activeTab` — currently active navigation tab
-- Helper functions: `getSpent`, `getAlerts`, `getMonthlyData`, `fmt`
-- CRUD methods: `addTransaction`, `deleteTransaction`, `upsertBudget`
-
-Data is persisted to `localStorage` automatically on every change.
+Designed to work across different screen sizes with a focus on readability.
 
 ---
 
-## Tech Stack
+## 🌱 Future Improvements
 
-| Tool | Purpose |
-|------|---------|
-| React 18 | UI framework |
-| React Context | State management |
-| Chart.js + react-chartjs-2 | Charts and visualizations |
-| CSS Variables | Theming and dark mode |
-| localStorage | Data persistence |
-| Create React App | Build tooling |
+* Backend integration
+* Authentication
+* Persistent storage
+* Advanced analytics
 
 ---
 
-## Design Decisions
+## 📌 Final Note
 
-- No external UI library used — all components are built from scratch with CSS
-- Chart.js chosen over Recharts for fine-grained canvas control
-- Context chosen over Redux since the app state is shallow and co-located
-- Indian Rupee (₹) used as currency with `en-IN` locale formatting
-- Mock data uses realistic Indian salary and expense figures
-- Color-coding is semantic: green for safe/positive, amber for warnings, red for danger
+This project demonstrates a **frontend-driven approach** to building a real-world financial dashboard with a focus on usability, insights, and proactive alerts.
 
 ---
 
-## Assignment Checklist
+## 👩‍💻 Author
 
-| Requirement | Status |
-|---|---|
-| Summary cards (balance, income, expenses) | Done |
-| Time-based visualization (balance trend) | Done |
-| Categorical visualization (spending breakdown) | Done |
-| Transaction list with date, amount, category, type | Done |
-| Filtering and search | Done |
-| Role-based UI (Admin / Viewer) | Done |
-| Insights section | Done |
-| State management (Context) | Done |
-| Responsive design | Done |
-| Empty / no-data states | Done |
-| Dark mode | Done |
-| Data persistence (localStorage) | Done |
-| Export functionality (CSV) | Done |
-| Budget limits with notifications | Done (bonus) |
+**Dipali Kunwar**
+Software Engineer in the Making 🚀
 
 ---
-
-## Author
-
-Dipali Kunwar — Frontend Developer Intern Assignment, Zorvyn FinTech Pvt. Ltd.
